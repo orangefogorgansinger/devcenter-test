@@ -1,0 +1,19 @@
+name: SingleStorageAccount
+summary: Summary
+description: Description
+templatePath: main.bicep
+parameters:
+- id: "storageAccountName"
+  name: "Storage Account Name"
+  description: "名前"
+  type: "string"
+  default: "here"
+- id: "skuName"
+  name: "Storage Account SKU"
+  description: "SKU"
+  type: "string"
+  default: "Standard_LRS"
+  allowed:
+    - "Standard_LRS"
+    - "Standard_GRS"
+runner: Bicep
